@@ -317,7 +317,7 @@ class UserManager():
 
             return path
 
-        @routes.get("/userdata/{file}")
+        @routes.get("/userdata/{file:path}")
         async def getuserdata(request):
             path = get_user_data_path(request, check_exists=True)
             if not isinstance(path, str):
